@@ -1,0 +1,107 @@
+/* =============================================
+   WD4E - Introduction to CSS3
+   Week 2 Homework - hw2.css
+   Bản sao MỚI từ hw1.css + các thay đổi mới
+   ============================================= */
+
+/* ── Giữ nguyên từ hw1.css ── */
+
+/* Bước 3 (HW1): body - font-family & font-size */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+
+/* Bước 4 (HW1): header - background-color */
+header {
+    background-color: #4a90a4;
+}
+
+/* Bước 6 (HW1): main - background-color & font-size */
+main {
+    background-color: #f5f0e8;
+    font-size: 18px;
+}
+
+/* Bước 7 (HW1): footer - background-color */
+footer {
+    background-color: #2c3e50;
+}
+
+/* Bước 9 (HW1): h1 - text-align, font-family, color */
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+/* Bước 10 (HW1): p - line-height */
+p {
+    line-height: 1.6;
+}
+
+/* ══════════════════════════════════════════════
+   PHẦN MỚI - Week 2
+   ══════════════════════════════════════════════ */
+
+/* ── Bước 2: Skip Navigation link "Chuyển đến Nội dung chính" ── */
+/* Liên kết ẩn, chỉ hiện khi được focus (Tab) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ── Bước 3: Nhận xét / giữ lại display inline-block cho li (từ HW1) ── */
+/* li đang dùng display: inline-block và width: 120px từ HW1
+   → phù hợp cho nav dạng ngang, giữ nguyên */
+li {
+    display: inline-block;
+    width: 120px;
+}
+
+/* ── Bước 4: nav - đổi sang inline-block và width ~80% ── */
+nav {
+    background-color: #2c3e50;
+    display: inline-block;
+    width: 80%;
+}
+
+/* ── Bước 5: Bộ chọn hậu duệ - chỉ ảnh trong nav ── */
+/* Chỉ áp dụng cho <img> nằm bên trong <nav> */
+nav img {
+    width: 10%;
+}
+
+/* ── Bước 6: Lớp .grid - CSS Grid 2 cột, mỗi cột ~40% ── */
+/* Dùng dấu chấm vì đây là class selector */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* ── Bước 7: Bộ chọn hậu duệ - chỉ ảnh trong .grid ── */
+/* Chỉ áp dụng cho <img> nằm trong .grid, không ảnh hưởng .flex */
+.grid img {
+    width: 100%;
+}
+
+/* ── Bước 9: Lớp .flex - Flexbox ── */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
